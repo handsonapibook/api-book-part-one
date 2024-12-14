@@ -1,0 +1,4 @@
+#Last tested versions
+#Successfully installed Pytest-8.3.3 SQLAlchemy-2.0.36 greenlet-3.1.1 iniconfig-2.0.0 pluggy-1.5.0
+SQLAlchemy>=2.0.0
+Pytest>=8.1.0

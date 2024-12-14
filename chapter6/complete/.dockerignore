@@ -1,0 +1,9 @@
+# This is the .dockerignore for Chapter 6
+
+.gitignore
+
+README.md
+
+*.DS_Store/
+
+**/__pycache__
