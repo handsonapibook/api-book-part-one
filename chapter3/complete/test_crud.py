@@ -22,7 +22,8 @@ def test_get_player(db_session):
 
 def test_get_players(db_session):
     """Tests that the count of players in the database is what is expected"""
-    players = crud.get_players(db_session, skip=0, limit=10000, min_last_changed_date=test_date)
+    players = crud.get_players(db_session, skip=0, limit=10000,
+                                min_last_changed_date=test_date)
     assert len(players) == 1018
 
 def test_get_players_by_name(db_session):
@@ -33,13 +34,16 @@ def test_get_players_by_name(db_session):
 
 
 def test_get_all_performances(db_session):
-    """Tests that the count of performances in the database is what is expected - all the performances"""
+    """Tests that the count of performances in the database is 
+    what is expected - all the performances"""
     performances = crud.get_performances(db_session, skip=0, limit=18000)
     assert len(performances) == 17306
 
 def test_get_new_performances(db_session):
-    """Tests that the count of performances in the database is what is expected"""
-    performances = crud.get_performances(db_session, skip=0, limit=10000, min_last_changed_date=test_date)
+    """Tests that the count of performances in the database is 
+    what is expected"""
+    performances = crud.get_performances(db_session, skip=0, limit=10000, 
+                                         min_last_changed_date=test_date)
     assert len(performances) == 2711
 
 def test_get_league(db_session):
